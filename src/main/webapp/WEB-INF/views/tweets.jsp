@@ -23,7 +23,7 @@
       <h1>Recent tweets</h1>
       <ul class="tweetList">
           <c:forEach items="${tweetList}" var="tweet">
-              <li id="twit_<c:out value="${tweet.id}"/>">
+              <li id="tweet_<c:out value="${tweet.id}"/>">
                   <div class="tweetMessage">
                       <c:out value="${tweet.message}"/>
                   </div>

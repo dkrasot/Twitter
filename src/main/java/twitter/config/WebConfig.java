@@ -38,7 +38,7 @@ public class WebConfig extends WebMvcConfigurerAdapter{
         messageSource.setBasename("messages");
         ////Reload MSG without recompiling
 //        ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
-//        messageSource.setBasename("file:///etc/twitter/messages");
+//        messageSource.setBasename("messages");
 //        messageSource.setCacheSeconds(10);
         return messageSource;
     }

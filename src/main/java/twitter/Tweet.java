@@ -5,11 +5,23 @@ import org.apache.commons.lang.builder.HashCodeBuilder;
 
 import java.util.Date;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Tweet {
     private final Long id;
-    private final String message;
     private final Date time;
+
+    @NotNull
+    @Size(min = 1, max = 140)
+    private final String message;
+    @Min(-90)
+    @Max(90)
     private Double latitude;
+    @Min(-180)
+    @Max(180)
     private Double longitude;
 
     public Tweet(String message, Date time) {
